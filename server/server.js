@@ -1,11 +1,17 @@
 const express = require("express");
+const app = express();
 const path = require("path");
 const logger = require('./config/logger')
 const morgan = require('morgan')
 const PORT = process.env.PORT || 3001;
 
-const app = express();
+app.use(express.json())
+// app.use(cors())
 
+app.get('/adduser',(req,res) => {
+  console.log(req.body)
+  res.send("Response Recieved: " + req.body)
+})
 
 
 const morganMiddleware = morgan(
