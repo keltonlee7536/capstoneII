@@ -1,7 +1,7 @@
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
 const app = express();
-
+const pool = require("./database.js");
 // const path = require("path");
 // const logger = require('./config/logger')
 // const morgan = require('morgan')
@@ -12,11 +12,29 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json())
 app.use(cors())
 
-app.get("/adduser", (req, res) => {
-  console.log(req.body)
-  res.send("response Recieved: " + req.body)
+app.post("/adduser", (req, res) => {
+  const username = req.body["username"];
+  const password = req.body["password"];
 
-})
+  console.log("username: " + username);
+  console.log("password: " + password);
+
+  const insertSTMT = `INSERT INTO  accounts ( username, password ) VALUES ( "${username}", "${password}")`,
+
+  
+  pool
+    .query(insertSTMT)
+    .then((response) => {
+    console.log("data saved");
+    console.log(response);
+  })
+    .catch((err) => {
+    console.log(err);
+  });
+
+  console.log(req.body);
+  res.send("response Recieved: " + req.body);
+});
 
 app.listen(4000, () => console.log(`server on localhost: ${PORT}`))
 
