@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const { pool } = require("./database.js");
+const pool = require("./database.js");
 // const path = require("path");
-// const logger = require('./config/logger')
+const logger = require('./config/logger')
 // const morgan = require('morgan')
 const PORT = process.env.PORT || 4000;
 
