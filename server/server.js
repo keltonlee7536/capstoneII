@@ -1,13 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const pool = require("./database.js");
+const { pool } = require("./database.js");
 // const path = require("path");
 // const logger = require('./config/logger')
 // const morgan = require('morgan')
 const PORT = process.env.PORT || 4000;
-
-//MIDDLEWARE
 
 app.use(express.json())
 app.use(cors())
@@ -19,7 +17,7 @@ app.post("/adduser", (req, res) => {
   console.log("username: " + username);
   console.log("password: " + password);
 
-  const insertSTMT = `INSERT INTO  accounts ( username, password ) VALUES ( "${username}", "${password}")`,
+  const insertSTMT = `INSERT INTO  accounts ( username, password ) VALUES ( '${username}', '${password}')`;
 
   
   pool
