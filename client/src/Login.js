@@ -10,13 +10,13 @@ function CreateLogin() {
                 </div>
                 <div className='credentials'>
                     <label>Email:</label>
-                    <input type="text"></input>
+                    <input type="text" required></input>
                     <label>Password:</label>
-                    <input type="text"></input>
-                    <button type="submit" href="/Home">Login</button>
+                    <input type="text" required></input>
+                    <a href='/StudentHome'><button type="submit" href="/Home">Login</button></a>
                 </div>
                 <div className='signUp'>
-                    <p>Don't have an account? <span href='/SignUp'>Sign Up</span></p>
+                    <p>Don't have an account? <a href='/SignUp'>Sign Up</a></p>
                 </div>
             </div>
         </div>

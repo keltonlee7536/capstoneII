@@ -2,7 +2,11 @@ body {
     padding: 0;
     margin: 0;
 }
-.loginOverall, .signOverall {
+a{
+    color: white;
+    text-decoration: none;
+}
+.loginOverall {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +15,7 @@ body {
     width: 100vw;
     background-image: linear-gradient(to top left, #A100FF, #119CFD);
     color: #fff;
-    .loginContainer, .signContainer {
+    .loginContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,7 +24,7 @@ body {
         border-radius: 10px;
         padding: 0px 75px 25px 75px;
         background-color: #171717;
-        .loginHeader, .signHeader {
+        .loginHeader {
             font-size: 25px;
         }
         .credentials {
@@ -41,9 +45,400 @@ body {
                 outline: none;
                 color: white;
             }
+            a {
+                button{
+                    margin-top: 40px;
+                    background-color: #119CFD;
+                }
+                button:hover {
+                    background-color: #A100FF;
+                    transition: .3s;
+                    cursor: pointer;
+                }
+            }           
+        }
+        .signUp {
+            padding: 10px;
+            font-size: 20px; 
+            a{
+                text-decoration: underline;
+                color:#119CFD;
+                cursor: pointer;
+            } 
+            a:hover {
+                color:#A100FF;
+            }
+        }
+    }
+}
+.signOverall {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to top left, #A100FF, #119CFD);
+    color: #fff;
+    .signContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 0px 20px 25px 20px;
+        background-color: #171717;
+        .signHeader {
+            font-size: 25px;
+        }
+        #information{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .credentials, .credentials2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;                
+                align-items: center;
+                padding: 0px 100px 0px 100px;
+                input, label, button {
+                    padding: 10px;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    border:none;
+                    width: 160%;
+                }
+                input {
+                    background-color: #484848;
+                    opacity: 80%;
+                    outline: none;
+                    color: white;
+                }
+                button {
+                    margin-top: 40px;
+                    background-color: #119CFD;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #A100FF;
+                    transition: .3s;
+                }
+            }
+        }
+        .credentials2 {
+            border-right: 1px solid lightgray;
+            padding: 150px;
+        }
+        .signUp {
+            padding: 10px;
+            font-size: 20px;  
+            a {
+                text-decoration: underline;
+                color:#119CFD;
+                cursor: pointer;
+            }
+            a:hover {
+                color:#A100FF;
+            }
+        }
+    }
+}
+#coursesOverall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top left, #A100FF, #119CFD);
+    color: #fff;
+    #topBar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        h3 {
+            font-size: 25px;
+        }
+        a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            opacity: 50%;
+        }
+    }
+    #coursesContainer {
+        background-color:#171717;
+        padding: 50px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        #searchBar {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0px 10px 0px;
+            font-size: 20px;
+            label{
+                font-size: 20px;
+                padding-bottom: 15px;
+            }
+            input {
+                padding: 12px;
+                border-radius: 10px;
+                border:none;
+                outline: none;
+                font-size: 20px;
+                background-color: #484848;
+                color: white;
+            }
+        }
+        #courseLocation {
+            padding: 10px;
+            margin-top: 10px;
+            #myCourseHeader{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+                button {
+                    font-size: 20px;
+                    height: 45px;
+                    padding: 10px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: #119CFD;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #A100FF;
+                    transition: .3s;
+                }
+            }
+            .courseModel {
+                background-color: white;
+                color: black;
+                border-radius: 5px;
+                margin-bottom: 25px;
+                padding: 15px;
+                .top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px solid lightgray;
+                    h1 {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 22px;
+                        .circle {
+                            font-size: 10px;
+                            opacity: 50%;
+                            padding: 0px 10px 0px 10px;
+                        }
+                        #tuition {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .middle {
+                    font-size: 20px;
+                    width: 80%;
+                    border-bottom: 1px solid lightgray;
+                }
+                .bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 15px;
+                    .removeClass button, .addClass button {
+                        background-color: rgb(255, 104, 104);
+                        font-size: 20px;
+                        border: none;
+                        padding: 15px;
+                        border-radius: 15px;
+                    }
+                    .removeClass button:hover, .addClass button:hover {
+                        cursor: pointer;
+                        background-color: rgb(255, 62, 62);
+                        transition: .2s;
+                    }
+                    .addClass button {
+                        background-color:#119CFD;
+                    }
+                    .addClass button:hover {
+                        background-color:#A100FF;
+                    }
+                }
+            }
+        }
+    }
+}
+#studentHomeOverall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top left, #A100FF, #119CFD);
+    color: #fff; 
+    #topBar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        h3 {
+            font-size: 25px;
+        }
+        a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            opacity: 50%;
+        }
+    }
+    #studentMain {
+        background-color:#171717;
+        padding: 50px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        #studentInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            #info1, #info2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;                
+                align-items: center;
+                padding: 0px 100px 0px 100px;
+                input, label {
+                    padding: 10px;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    border:none;
+                    width: 160%;
+                }
+                input {
+                    background-color: #484848;
+                    opacity: 80%;
+                    outline: none;
+                    color: white;
+                }
+            }
+        }
+        #studentCourses {
+            margin-bottom: 50px;
+            #header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 25px;
+                button {
+                    font-size: 20px;
+                    padding: 10px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: #119CFD;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #A100FF;
+                    transition: .3s;
+                }
+            }
+        }
+        .courseModel {
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            padding: 15px;
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 2px solid lightgray;
+                h1 {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 22px;
+                    .circle {
+                        font-size: 10px;
+                        opacity: 50%;
+                        padding: 0px 10px 0px 10px;
+                    }
+                    #tuition {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 15px;
+                padding-top: 15px;
+                .removeClass button, .addClass button {
+                    background-color: rgb(255, 104, 104);
+                    font-size: 20px;
+                    border: none;
+                    padding: 15px;
+                    border-radius: 15px;
+                }
+                .removeClass button:hover, .addClass button:hover {
+                    cursor: pointer;
+                    background-color: rgb(255, 62, 62);
+                    transition: .2s;
+                }
+                .addClass button {
+                    background-color:#119CFD;
+                }
+                .addClass button:hover {
+                    background-color:#A100FF;
+                }
+            }
+        }
+        #studentCreditHours {
+            margin-bottom: 50px;
+        }
+    }
+}
+#adminOverall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top left, #A100FF, #119CFD);
+    color: #fff; 
+    #topBar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        h3 {
+            font-size: 25px;
+        }
+        a:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            opacity: 50%;
+        
+        }
+    }
+    #adminMain {
+        background-color:#171717;
+        padding: 50px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        #adminInfoHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             button {
-                width: 130%;
-                margin-top: 40px;
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 15px;
+                border: none;
                 background-color: #119CFD;
                 cursor: pointer;
             }
@@ -52,16 +447,148 @@ body {
                 transition: .3s;
             }
         }
-        .signUp {
-            padding: 10px;
-            font-size: 20px;  
-            span {
-                text-decoration: underline;
-                color:#119CFD;
+        #adminInfo, #studentInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            padding-bottom: 50px;
+            border-bottom: 3px solid lightgray;
+            #info1, #info2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;                
+                align-items: center;
+                padding: 0px 100px 0px 100px;
+                input, label {
+                    padding: 10px;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    border:none;
+                    width: 160%;
+                }
+                input {
+                    background-color: #484848;
+                    opacity: 80%;
+                    outline: none;
+                    color: white;
+                }
+            }
+        }
+        #searchBar {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0px 10px 0px;
+            font-size: 20px;
+            label{
+                font-size: 20px;
+                padding-bottom: 15px;
+            }
+            input {
+                padding: 12px;
+                border-radius: 10px;
+                border:none;
+                outline: none;
+                font-size: 20px;
+                background-color: #484848;
+                color: white;
+            }
+        }
+        #studentInfoLocation {
+            #studentInfoHeader{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                button {
+                    font-size: 20px;
+                    padding: 10px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: #119CFD;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: #A100FF;
+                    transition: .3s;
+                }
+            }
+            #studentInfo {
+                border: none;
+                padding-bottom: 0;
+            }
+        }
+        #studentScheduleHeader{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 15px;
+                border: none;
+                background-color: #119CFD;
                 cursor: pointer;
             }
-            span:hover {
-                color:#A100FF;
+            button:hover {
+                background-color: #A100FF;
+                transition: .3s;
+            }
+        }
+        #studentScheduleLocation {
+            border-bottom: 3px solid lightgray;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            .courseModel {
+                background-color: white;
+                color: black;
+                border-radius: 5px;
+                margin-bottom: 25px;
+                padding: 15px;
+                .top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px solid lightgray;
+                    h1 {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 22px;
+                        .circle {
+                            font-size: 10px;
+                            opacity: 50%;
+                            padding: 0px 10px 0px 10px;
+                        }
+                        #tuition {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 15px;
+                    padding-top: 15px;
+                    .removeClass button, .addClass button {
+                        background-color: rgb(255, 104, 104);
+                        font-size: 20px;
+                        border: none;
+                        padding: 15px;
+                        border-radius: 15px;
+                    }
+                    .removeClass button:hover, .addClass button:hover {
+                        cursor: pointer;
+                        background-color: rgb(255, 62, 62);
+                        transition: .2s;
+                    }
+                    .addClass button {
+                        background-color:#119CFD;
+                    }
+                    .addClass button:hover {
+                        background-color:#A100FF;
+                    }
+                }
             }
         }
     }

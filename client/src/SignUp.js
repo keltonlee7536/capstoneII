@@ -8,19 +8,29 @@ function CreateSignUp() {
                     <div className='signHeader'>
                         <h1>Sign Up</h1>
                     </div>
-                    <div className='credentials' id="signCredentials">
-                            <label>First Name:</label>
-                            <input type="text"></input>
-                            <label>Last Name:</label>
-                            <input type="text"></input>
+                    <div id="information">
+                        <div class="credentials2">
                             <label>Email:</label>
-                            <input type="text"></input>
+                            <input type="text" required></input>
+                            <label>User Name:</label>
+                            <input type="text" required></input>
                             <label>Create Password:</label>
-                            <input type="text"></input>
-                        <button type="submit" href="/Home">Login</button>
+                            <input type="text" required></input>
+                            <button type="submit" href="/Home">Sign Up</button>
+                        </div>
+                        <div className='credentials'>
+                            <label>First Name:</label>
+                            <input type="text" required></input>
+                            <label>Last Name:</label>
+                            <input type="text" required></input> 
+                            <label>Phone Number:</label>
+                            <input type="number"></input> 
+                            <label>Address:</label>
+                            <input type="text" required></input>   
+                        </div>
                     </div>
                     <div className='signUp'>
-                        <p>Already have an account? <span href='/Login'>Login</span></p>
+                        <p>Already have an account? <a href='/Login'>Login</a></p>
                     </div>
                 </div>
             </div>

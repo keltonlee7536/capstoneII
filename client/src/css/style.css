@@ -3,7 +3,12 @@ body {
   margin: 0;
 }
 
-.loginOverall, .signOverall {
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.loginOverall {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +18,7 @@ body {
   background-image: linear-gradient(to top left, #A100FF, #119CFD);
   color: #fff;
 }
-.loginOverall .loginContainer, .loginOverall .signContainer, .signOverall .loginContainer, .signOverall .signContainer {
+.loginOverall .loginContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,49 +28,571 @@ body {
   padding: 0px 75px 25px 75px;
   background-color: #171717;
 }
-.loginOverall .loginContainer .loginHeader, .loginOverall .loginContainer .signHeader, .loginOverall .signContainer .loginHeader, .loginOverall .signContainer .signHeader, .signOverall .loginContainer .loginHeader, .signOverall .loginContainer .signHeader, .signOverall .signContainer .loginHeader, .signOverall .signContainer .signHeader {
+.loginOverall .loginContainer .loginHeader {
   font-size: 25px;
 }
-.loginOverall .loginContainer .credentials, .loginOverall .signContainer .credentials, .signOverall .loginContainer .credentials, .signOverall .signContainer .credentials {
+.loginOverall .loginContainer .credentials {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.loginOverall .loginContainer .credentials input, .loginOverall .loginContainer .credentials label, .loginOverall .loginContainer .credentials button, .loginOverall .signContainer .credentials input, .loginOverall .signContainer .credentials label, .loginOverall .signContainer .credentials button, .signOverall .loginContainer .credentials input, .signOverall .loginContainer .credentials label, .signOverall .loginContainer .credentials button, .signOverall .signContainer .credentials input, .signOverall .signContainer .credentials label, .signOverall .signContainer .credentials button {
+.loginOverall .loginContainer .credentials input, .loginOverall .loginContainer .credentials label, .loginOverall .loginContainer .credentials button {
   padding: 10px;
   font-size: 20px;
   border-radius: 10px;
   border: none;
   width: 120%;
 }
-.loginOverall .loginContainer .credentials input, .loginOverall .signContainer .credentials input, .signOverall .loginContainer .credentials input, .signOverall .signContainer .credentials input {
+.loginOverall .loginContainer .credentials input {
   background-color: #484848;
   opacity: 80%;
   outline: none;
   color: white;
 }
-.loginOverall .loginContainer .credentials button, .loginOverall .signContainer .credentials button, .signOverall .loginContainer .credentials button, .signOverall .signContainer .credentials button {
-  width: 130%;
+.loginOverall .loginContainer .credentials a button {
   margin-top: 40px;
   background-color: #119CFD;
-  cursor: pointer;
 }
-.loginOverall .loginContainer .credentials button:hover, .loginOverall .signContainer .credentials button:hover, .signOverall .loginContainer .credentials button:hover, .signOverall .signContainer .credentials button:hover {
+.loginOverall .loginContainer .credentials a button:hover {
   background-color: #A100FF;
   transition: 0.3s;
+  cursor: pointer;
 }
-.loginOverall .loginContainer .signUp, .loginOverall .signContainer .signUp, .signOverall .loginContainer .signUp, .signOverall .signContainer .signUp {
+.loginOverall .loginContainer .signUp {
   padding: 10px;
   font-size: 20px;
 }
-.loginOverall .loginContainer .signUp span, .loginOverall .signContainer .signUp span, .signOverall .loginContainer .signUp span, .signOverall .signContainer .signUp span {
+.loginOverall .loginContainer .signUp a {
   text-decoration: underline;
   color: #119CFD;
   cursor: pointer;
 }
-.loginOverall .loginContainer .signUp span:hover, .loginOverall .signContainer .signUp span:hover, .signOverall .loginContainer .signUp span:hover, .signOverall .signContainer .signUp span:hover {
+.loginOverall .loginContainer .signUp a:hover {
   color: #A100FF;
+}
+
+.signOverall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to top left, #A100FF, #119CFD);
+  color: #fff;
+}
+.signOverall .signContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0px 20px 25px 20px;
+  background-color: #171717;
+}
+.signOverall .signContainer .signHeader {
+  font-size: 25px;
+}
+.signOverall .signContainer #information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.signOverall .signContainer #information .credentials, .signOverall .signContainer #information .credentials2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px 0px 100px;
+}
+.signOverall .signContainer #information .credentials input, .signOverall .signContainer #information .credentials label, .signOverall .signContainer #information .credentials button, .signOverall .signContainer #information .credentials2 input, .signOverall .signContainer #information .credentials2 label, .signOverall .signContainer #information .credentials2 button {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 160%;
+}
+.signOverall .signContainer #information .credentials input, .signOverall .signContainer #information .credentials2 input {
+  background-color: #484848;
+  opacity: 80%;
+  outline: none;
+  color: white;
+}
+.signOverall .signContainer #information .credentials button, .signOverall .signContainer #information .credentials2 button {
+  margin-top: 40px;
+  background-color: #119CFD;
+  cursor: pointer;
+}
+.signOverall .signContainer #information .credentials button:hover, .signOverall .signContainer #information .credentials2 button:hover {
+  background-color: #A100FF;
+  transition: 0.3s;
+}
+.signOverall .signContainer .credentials2 {
+  border-right: 1px solid lightgray;
+  padding: 150px;
+}
+.signOverall .signContainer .signUp {
+  padding: 10px;
+  font-size: 20px;
+}
+.signOverall .signContainer .signUp a {
+  text-decoration: underline;
+  color: #119CFD;
+  cursor: pointer;
+}
+.signOverall .signContainer .signUp a:hover {
+  color: #A100FF;
+}
+
+#coursesOverall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top left, #A100FF, #119CFD);
+  color: #fff;
+}
+#coursesOverall #topBar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+#coursesOverall #topBar h3 {
+  font-size: 25px;
+}
+#coursesOverall #topBar a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 50%;
+}
+#coursesOverall #coursesContainer {
+  background-color: #171717;
+  padding: 50px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+#coursesOverall #coursesContainer #searchBar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+  font-size: 20px;
+}
+#coursesOverall #coursesContainer #searchBar label {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+#coursesOverall #coursesContainer #searchBar input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background-color: #484848;
+  color: white;
+}
+#coursesOverall #coursesContainer #courseLocation {
+  padding: 10px;
+  margin-top: 10px;
+}
+#coursesOverall #coursesContainer #courseLocation #myCourseHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+#coursesOverall #coursesContainer #courseLocation #myCourseHeader button {
+  font-size: 20px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #119CFD;
+  cursor: pointer;
+}
+#coursesOverall #coursesContainer #courseLocation #myCourseHeader button:hover {
+  background-color: #A100FF;
+  transition: 0.3s;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgray;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .top h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22px;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .top h1 .circle {
+  font-size: 10px;
+  opacity: 50%;
+  padding: 0px 10px 0px 10px;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .top h1 #tuition {
+  font-size: 20px;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .middle {
+  font-size: 20px;
+  width: 80%;
+  border-bottom: 1px solid lightgray;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .removeClass button, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button {
+  background-color: rgb(255, 104, 104);
+  font-size: 20px;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .removeClass button:hover, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 62, 62);
+  transition: 0.2s;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button {
+  background-color: #119CFD;
+}
+#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button:hover {
+  background-color: #A100FF;
+}
+
+#studentHomeOverall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top left, #A100FF, #119CFD);
+  color: #fff;
+}
+#studentHomeOverall #topBar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+#studentHomeOverall #topBar h3 {
+  font-size: 25px;
+}
+#studentHomeOverall #topBar a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 50%;
+}
+#studentHomeOverall #studentMain {
+  background-color: #171717;
+  padding: 50px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+#studentHomeOverall #studentMain #studentInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+#studentHomeOverall #studentMain #studentInfo #info1, #studentHomeOverall #studentMain #studentInfo #info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px 0px 100px;
+}
+#studentHomeOverall #studentMain #studentInfo #info1 input, #studentHomeOverall #studentMain #studentInfo #info1 label, #studentHomeOverall #studentMain #studentInfo #info2 input, #studentHomeOverall #studentMain #studentInfo #info2 label {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 160%;
+}
+#studentHomeOverall #studentMain #studentInfo #info1 input, #studentHomeOverall #studentMain #studentInfo #info2 input {
+  background-color: #484848;
+  opacity: 80%;
+  outline: none;
+  color: white;
+}
+#studentHomeOverall #studentMain #studentCourses {
+  margin-bottom: 50px;
+}
+#studentHomeOverall #studentMain #studentCourses #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+#studentHomeOverall #studentMain #studentCourses #header button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #119CFD;
+  cursor: pointer;
+}
+#studentHomeOverall #studentMain #studentCourses #header button:hover {
+  background-color: #A100FF;
+  transition: 0.3s;
+}
+#studentHomeOverall #studentMain .courseModel {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+#studentHomeOverall #studentMain .courseModel .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgray;
+}
+#studentHomeOverall #studentMain .courseModel .top h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22px;
+}
+#studentHomeOverall #studentMain .courseModel .top h1 .circle {
+  font-size: 10px;
+  opacity: 50%;
+  padding: 0px 10px 0px 10px;
+}
+#studentHomeOverall #studentMain .courseModel .top h1 #tuition {
+  font-size: 20px;
+}
+#studentHomeOverall #studentMain .courseModel .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding-top: 15px;
+}
+#studentHomeOverall #studentMain .courseModel .bottom .removeClass button, #studentHomeOverall #studentMain .courseModel .bottom .addClass button {
+  background-color: rgb(255, 104, 104);
+  font-size: 20px;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+}
+#studentHomeOverall #studentMain .courseModel .bottom .removeClass button:hover, #studentHomeOverall #studentMain .courseModel .bottom .addClass button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 62, 62);
+  transition: 0.2s;
+}
+#studentHomeOverall #studentMain .courseModel .bottom .addClass button {
+  background-color: #119CFD;
+}
+#studentHomeOverall #studentMain .courseModel .bottom .addClass button:hover {
+  background-color: #A100FF;
+}
+#studentHomeOverall #studentMain #studentCreditHours {
+  margin-bottom: 50px;
+}
+
+#adminOverall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top left, #A100FF, #119CFD);
+  color: #fff;
+}
+#adminOverall #topBar {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+#adminOverall #topBar h3 {
+  font-size: 25px;
+}
+#adminOverall #topBar a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 50%;
+}
+#adminOverall #adminMain {
+  background-color: #171717;
+  padding: 50px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+#adminOverall #adminMain #adminInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#adminOverall #adminMain #adminInfoHeader button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #119CFD;
+  cursor: pointer;
+}
+#adminOverall #adminMain #adminInfoHeader button:hover {
+  background-color: #A100FF;
+  transition: 0.3s;
+}
+#adminOverall #adminMain #adminInfo, #adminOverall #adminMain #studentInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  padding-bottom: 50px;
+  border-bottom: 3px solid lightgray;
+}
+#adminOverall #adminMain #adminInfo #info1, #adminOverall #adminMain #adminInfo #info2, #adminOverall #adminMain #studentInfo #info1, #adminOverall #adminMain #studentInfo #info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px 0px 100px;
+}
+#adminOverall #adminMain #adminInfo #info1 input, #adminOverall #adminMain #adminInfo #info1 label, #adminOverall #adminMain #adminInfo #info2 input, #adminOverall #adminMain #adminInfo #info2 label, #adminOverall #adminMain #studentInfo #info1 input, #adminOverall #adminMain #studentInfo #info1 label, #adminOverall #adminMain #studentInfo #info2 input, #adminOverall #adminMain #studentInfo #info2 label {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 160%;
+}
+#adminOverall #adminMain #adminInfo #info1 input, #adminOverall #adminMain #adminInfo #info2 input, #adminOverall #adminMain #studentInfo #info1 input, #adminOverall #adminMain #studentInfo #info2 input {
+  background-color: #484848;
+  opacity: 80%;
+  outline: none;
+  color: white;
+}
+#adminOverall #adminMain #searchBar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+  font-size: 20px;
+}
+#adminOverall #adminMain #searchBar label {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+#adminOverall #adminMain #searchBar input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background-color: #484848;
+  color: white;
+}
+#adminOverall #adminMain #studentInfoLocation #studentInfoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#adminOverall #adminMain #studentInfoLocation #studentInfoHeader button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #119CFD;
+  cursor: pointer;
+}
+#adminOverall #adminMain #studentInfoLocation #studentInfoHeader button:hover {
+  background-color: #A100FF;
+  transition: 0.3s;
+}
+#adminOverall #adminMain #studentInfoLocation #studentInfo {
+  border: none;
+  padding-bottom: 0;
+}
+#adminOverall #adminMain #studentScheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#adminOverall #adminMain #studentScheduleHeader button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #119CFD;
+  cursor: pointer;
+}
+#adminOverall #adminMain #studentScheduleHeader button:hover {
+  background-color: #A100FF;
+  transition: 0.3s;
+}
+#adminOverall #adminMain #studentScheduleLocation {
+  border-bottom: 3px solid lightgray;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgray;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 .circle {
+  font-size: 10px;
+  opacity: 50%;
+  padding: 0px 10px 0px 10px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 #tuition {
+  font-size: 20px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding-top: 15px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .removeClass button, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button {
+  background-color: rgb(255, 104, 104);
+  font-size: 20px;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .removeClass button:hover, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 62, 62);
+  transition: 0.2s;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button {
+  background-color: #119CFD;
+}
+#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button:hover {
+  background-color: #A100FF;
 }
 
 /*# sourceMappingURL=style.css.map */
