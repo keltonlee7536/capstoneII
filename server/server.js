@@ -10,14 +10,42 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json())
 app.use(cors())
 
+//add user
 app.post("/adduser", (req, res) => {
   const username = req.body["username"];
   const password = req.body["password"];
+  const email = req.body["email@example.com"];
+  const firstName = req.body["firstName"];
+  const lastName = req.body["lastName"];
+  const phoneNumber = req.body["phoneNumber"];
+  const address = req.body["address"];
+  const isAdmin = req.body["isAdmin"];
+  const createDate = req.body["createDate"];
 
-  console.log("username: " + username);
-  console.log("password: " + password);
+  // console.log("username: " + username);
+  // console.log("password: " + password);
 
-  const insertSTMT = `INSERT INTO  accounts ( username, password ) VALUES ( '${username}', '${password}')`;
+  const insertSTMT = `INSERT INTO  accounts ( 
+    username, 
+    password, 
+    email, 
+    firstName, 
+    lastName,
+    phoneNumber,
+    address,
+    isAdmin,
+    createDate,
+     ) VALUES ( 
+    '${username}',
+    '${password}',
+    '${email}',
+    '${firstName}',
+    '${lastName}',
+    '${phoneNumber}',
+    '${address}',
+    '${isAdmin}',
+    '${createDate}')
+    `
 
   
   pool
