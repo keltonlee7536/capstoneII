@@ -1,36 +1,31 @@
 const express = require("express");
+//const { response } = require("express");
 const cors = require("cors");
 const app = express();
 const pool = require("./database.js");
-// const path = require("path");
+const path = require("path");
 const logger = require('./config/logger')
-// const morgan = require('morgan')
+ const morgan = require('morgan')
 const PORT = process.env.PORT || 4000;
-
 app.use(express.json())
 app.use(cors())
 
 //add user
 app.post("/adduser", (req, res) => {
-  const username = req.body["username"];
-  const password = req.body["password"];
-  const email = req.body["email@example.com"];
-  const first_name = req.body["first_name"];
-  const last_name = req.body["last_name"];
-  const phone_number = req.body["phone_number"];
-  const address = req.body["address"];
-  const role = req.body["role"];
-  const create_date = req.body["create_date"];
-
-  // console.log("username: " + username);
-  // console.log("password: " + password);
+  const username = req.body["username"]
+  const password = req.body["password"]
+  const email = req.body["email@example.com"]
+  const first_name = req.body["first_name"]
+  const last_name = req.body["last_name"]
+  const phone_number = req.body["phone_number"]
+  const address = req.body["address"]
+  const role = req.body["role"]
+  const create_date = req.body["create_date"]
 
   const insertSTMT = `INSERT INTO  accounts (username, password, email, first_name, last_name, phone_number, address, role, create_date)
    
 VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}', '${phone_number}','${address}','${role}','${create_date}');
     `
-
-  
   pool
     .query(insertSTMT)
     .then((response) => {
@@ -45,7 +40,30 @@ VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}
   res.send("response Recieved: " + req.body);
 });
 
+
+
+
+//a request to read user data?
+
+app.get("/getuser", (req, res) => {
+  res.send("res.send portion of app.get")
+});
+
+app.post("/getuserpost", (req, res) => {
+  res.send("res.send portion of app.post")
+});
+
+
+
+
+
+
+
+
 app.listen(4000, () => console.log(`server on localhost: ${PORT}`))
+
+
+
 
 // //an app.get request
 // app.get("/adduser",(req,res) => {
@@ -71,15 +89,15 @@ app.listen(4000, () => console.log(`server on localhost: ${PORT}`))
 
 // app.use(morganMiddleware)
 
-// // Have Node serve the files for our built React app
-// app.use(express.static(path.resolve(__dirname, "../client/build")));
-// app.use(express.json())
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.json())
 
-// // Handle GET requests to /api route
-// app.get("/api", (req, res) => {
-//   logger.log('debug','in/api');
-//   res.json({ message: "Hello from server!" });
-// });
+// Handle GET requests to /api route
+app.get("/api", (req, res) => {
+ logger.log('debug','in/api');
+  res.json({ message: "Hello from server!" });
+});
 
 // app.post('/rating',(req,res)=>{
 //  const value = req.body.rating
