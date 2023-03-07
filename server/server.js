@@ -47,9 +47,6 @@ VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}
 
 app.listen(4000, () => console.log(`server on localhost: ${PORT}`))
 
-
-
-
 // //an app.get request
 // app.get("/adduser",(req,res) => {
 //   //how we handle the request
