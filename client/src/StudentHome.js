@@ -1,12 +1,13 @@
 import React from "react";
 import './css/style.css';
+import { Link } from "react-router-dom";
 
 function CreateStudentHome() {
     return(
     <div id="studentHomeOverall">
         <div id="topBar">
-            <a href="/StudentHome"><h3>User Name</h3></a>
-            <a href="/Login"><h3 id="Log Out">Log Out</h3></a>
+            <Link to={"/StudentHome"}><h3>User Name</h3></Link>
+            <Link to={"/Login"}><h3>Log Out</h3></Link>
         </div>
         <div id="studentMain">
             <h1>My Information</h1>
@@ -31,7 +32,7 @@ function CreateStudentHome() {
             <div id="studentCourses">
                 <div id="header">
                     <h1>My Courses</h1>
-                    <a href="Courses"><button>Add Classes</button></a>
+                    <Link to={'/Courses'}><button>Add Classes</button></Link>
                 </div>
                 <div id="courseContainer">
                     <div className="courseModel">

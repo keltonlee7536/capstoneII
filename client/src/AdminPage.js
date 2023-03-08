@@ -1,12 +1,13 @@
 import React from "react";
 import './css/style.css';
+import { Link } from "react-router-dom";
 
 function CreateAdminPage() {
     return(
         <div id="adminOverall">
             <div id="topBar">
-                <a href="/AdminPage"><h3>Admin User Name</h3></a>
-                <a href="/Login"><h3>Log Out</h3></a>
+                <Link to={"/AdminPage"}><h3>Admin Home</h3></Link>
+                <Link to={"/Login"}><h3>Log Out</h3></Link>
             </div>
             <div id="adminMain">
                 <div id="adminInfoHeader">

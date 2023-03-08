@@ -1,5 +1,6 @@
 import './css/style.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function CreateLogin() {
     return (
@@ -10,13 +11,17 @@ function CreateLogin() {
                 </div>
                 <div className='credentials'>
                     <label>Email:</label>
-                    <input type="text" required></input>
+                    <input type="text" id="user_email" required></input>
                     <label>Password:</label>
-                    <input type="text" required></input>
-                    <a href='/StudentHome'><button type="submit" href="/Home">Login</button></a>
+                    <input type="text" id="user_password" required></input>
+                    <Link to ={'/StudentHome'}><button type="submit" href="/Home">Login</button></Link>
                 </div>
                 <div className='signUp'>
-                    <p>Don't have an account? <a href='/SignUp'>Sign Up</a></p>
+                    <p>Don't have an account? <Link to={'/SignUp'}>Sign Up</Link>
+                    <br/>
+                    <br/>
+                    <Link to={'/AdminPage'}>Admin Quick Link</Link>
+                    </p>
                 </div>
             </div>
         </div>

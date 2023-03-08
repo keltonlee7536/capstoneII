@@ -1,12 +1,13 @@
 import React from "react";
 import './css/style.css';
+import { Link } from "react-router-dom";
 
 function CreateCourses(){
     return(
         <div id="coursesOverall">
             <div id="topBar">
-                <a href="/StudentHome"><h3>User Name</h3></a>
-                <a href="/Login"><h3 id="Log Out">Log Out</h3></a>
+                <Link to={"/StudentHome"}><h3>User Name</h3></Link>
+                <Link to={"/Login"}><h3>Log Out</h3></Link>
             </div>
             <div id="coursesContainer">
                 <div id="searchBar">
