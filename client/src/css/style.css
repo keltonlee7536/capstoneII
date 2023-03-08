@@ -8,6 +8,68 @@ a {
   text-decoration: none;
 }
 
+.courseModel {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+.courseModel .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgray;
+}
+.courseModel .top h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22px;
+}
+.courseModel .top h1 span {
+  padding-right: 10px;
+}
+.courseModel .top h1 .circle {
+  font-size: 10px;
+  opacity: 50%;
+}
+.courseModel .top h1 #tuition {
+  font-size: 20px;
+}
+.courseModel .middle {
+  font-size: 20px;
+  width: 80%;
+  border-bottom: 1px solid lightgray;
+}
+.courseModel .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+.courseModel .bottom .removeClass button, .courseModel .bottom .addClass button {
+  background-color: rgb(255, 104, 104);
+  font-size: 20px;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+}
+.courseModel .bottom .removeClass button svg, .courseModel .bottom .addClass button svg {
+  transform: scale(1.5);
+}
+.courseModel .bottom .removeClass button:hover, .courseModel .bottom .addClass button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 62, 62);
+  transition: 0.2s;
+}
+.courseModel .bottom .addClass button {
+  background-color: #119CFD;
+}
+.courseModel .bottom .addClass button:hover {
+  background-color: #A100FF;
+}
+
 .loginOverall {
   display: flex;
   flex-direction: column;
@@ -218,62 +280,6 @@ a {
   background-color: #A100FF;
   transition: 0.3s;
 }
-#coursesOverall #coursesContainer #courseLocation .courseModel {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  margin-bottom: 25px;
-  padding: 15px;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid lightgray;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .top h1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 22px;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .top h1 .circle {
-  font-size: 10px;
-  opacity: 50%;
-  padding: 0px 10px 0px 10px;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .top h1 #tuition {
-  font-size: 20px;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .middle {
-  font-size: 20px;
-  width: 80%;
-  border-bottom: 1px solid lightgray;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .removeClass button, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button {
-  background-color: rgb(255, 104, 104);
-  font-size: 20px;
-  border: none;
-  padding: 15px;
-  border-radius: 15px;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .removeClass button:hover, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button:hover {
-  cursor: pointer;
-  background-color: rgb(255, 62, 62);
-  transition: 0.2s;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button {
-  background-color: #119CFD;
-}
-#coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button:hover {
-  background-color: #A100FF;
-}
 
 #studentHomeOverall {
   display: flex;
@@ -350,58 +356,6 @@ a {
 #studentHomeOverall #studentMain #studentCourses #header button:hover {
   background-color: #A100FF;
   transition: 0.3s;
-}
-#studentHomeOverall #studentMain .courseModel {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  margin-bottom: 25px;
-  padding: 15px;
-}
-#studentHomeOverall #studentMain .courseModel .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid lightgray;
-}
-#studentHomeOverall #studentMain .courseModel .top h1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 22px;
-}
-#studentHomeOverall #studentMain .courseModel .top h1 .circle {
-  font-size: 10px;
-  opacity: 50%;
-  padding: 0px 10px 0px 10px;
-}
-#studentHomeOverall #studentMain .courseModel .top h1 #tuition {
-  font-size: 20px;
-}
-#studentHomeOverall #studentMain .courseModel .bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  padding-top: 15px;
-}
-#studentHomeOverall #studentMain .courseModel .bottom .removeClass button, #studentHomeOverall #studentMain .courseModel .bottom .addClass button {
-  background-color: rgb(255, 104, 104);
-  font-size: 20px;
-  border: none;
-  padding: 15px;
-  border-radius: 15px;
-}
-#studentHomeOverall #studentMain .courseModel .bottom .removeClass button:hover, #studentHomeOverall #studentMain .courseModel .bottom .addClass button:hover {
-  cursor: pointer;
-  background-color: rgb(255, 62, 62);
-  transition: 0.2s;
-}
-#studentHomeOverall #studentMain .courseModel .bottom .addClass button {
-  background-color: #119CFD;
-}
-#studentHomeOverall #studentMain .courseModel .bottom .addClass button:hover {
-  background-color: #A100FF;
 }
 #studentHomeOverall #studentMain #studentCreditHours {
   margin-bottom: 50px;
@@ -542,58 +496,6 @@ a {
   border-bottom: 3px solid lightgray;
   margin-bottom: 40px;
   padding-bottom: 20px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel {
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-  margin-bottom: 25px;
-  padding: 15px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid lightgray;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 22px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 .circle {
-  font-size: 10px;
-  opacity: 50%;
-  padding: 0px 10px 0px 10px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 #tuition {
-  font-size: 20px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  padding-top: 15px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .removeClass button, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button {
-  background-color: rgb(255, 104, 104);
-  font-size: 20px;
-  border: none;
-  padding: 15px;
-  border-radius: 15px;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .removeClass button:hover, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button:hover {
-  cursor: pointer;
-  background-color: rgb(255, 62, 62);
-  transition: 0.2s;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button {
-  background-color: #119CFD;
-}
-#adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button:hover {
-  background-color: #A100FF;
 }
 
 /*# sourceMappingURL=style.css.map */

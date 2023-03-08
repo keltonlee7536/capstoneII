@@ -1,12 +1,13 @@
 import React from "react";
 import './css/style.css';
 import { Link } from "react-router-dom";
+import CourseModel from './CourseModel';
 
 function CreateStudentHome() {
     return(
     <div id="studentHomeOverall">
         <div id="topBar">
-            <Link to={"/StudentHome"}><h3>User Name</h3></Link>
+            <Link to={"/StudentHome"}><h3 id="username">User Name</h3></Link>
             <Link to={"/Login"}><h3>Log Out</h3></Link>
         </div>
         <div id="studentMain">
@@ -14,19 +15,19 @@ function CreateStudentHome() {
             <div id="studentInfo">
                 <div id="info1">
                     <label>First Name:</label>
-                    <input type="text"></input>
+                    <input type="text" id="first_name"></input>
                     <label>Last Name:</label>
-                    <input type="text"></input>
+                    <input type="text" id="last_name"></input>
                     <label>User Name:</label>
-                    <input type="text"></input>
+                    <input type="text" id="username"></input>
                 </div>
                 <div id="info2">
                     <label>Phone Number:</label>
-                    <input type="number"></input>
+                    <input type="number" id="phone_number"></input>
                     <label>Address:</label>
-                    <input type="text"></input>
+                    <input type="text" id="address"></input>
                     <label>Email:</label>
-                    <input type="text"></input>
+                    <input type="text" id="email"></input>
                 </div>
             </div>
             <div id="studentCourses">
@@ -35,82 +36,16 @@ function CreateStudentHome() {
                     <Link to={'/Courses'}><button>Add Classes</button></Link>
                 </div>
                 <div id="courseContainer">
-                    <div className="courseModel">
-                        <div className="top">
-                            <h1 id="title">Introduction to Something or Other 2600 <span className="circle">&#9679;</span><span id="tuition"> $500</span></h1>
-                            <h4 id="semester">Fall 2023</h4>
-                        </div>
-                        <div className="bottom">
-                        <div className="classNumber">
-                            <h3>Class Number:<span id="classNumber"> 1</span></h3>
-                        </div>
-                            <div className="maximum-capacity">
-                                <h3>Capacity:<span id="maximum-capacity"> 27/30</span></h3>
-                            </div>
-                            <div className="credit-hours">
-                                <h3>Credit Hours:<span id="credit-hours"> 1</span></h3>
-                            </div>
-                            <div className="addClass" style={{display: 'none'}}>
-                                <button type="submit">Add Class</button>
-                            </div>
-                            <div className="removeClass">
-                                <button type="submit">Remove Class</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseModel">
-                        <div className="top">
-                            <h1 id="title">Introduction to Something or Other 2600 <span className="circle">&#9679;</span><span id="tuition"> $500</span></h1>
-                            <h4 id="semester">Fall 2023</h4>
-                        </div>
-                        <div className="bottom">
-                        <div className="classNumber">
-                            <h3>Class Number:<span id="classNumber"> 1</span></h3>
-                        </div>
-                            <div className="maximum-capacity">
-                                <h3>Capacity:<span id="maximum-capacity"> 27/30</span></h3>
-                            </div>
-                            <div className="credit-hours">
-                                <h3>Credit Hours:<span id="credit-hours"> 1</span></h3>
-                            </div>
-                            <div className="addClass" style={{display: 'none'}}>
-                                <button type="submit">Add Class</button>
-                            </div>
-                            <div className="removeClass">
-                                <button type="submit">Remove Class</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseModel">
-                        <div className="top">
-                            <h1 id="title">Introduction to Something or Other 2600 <span className="circle">&#9679;</span><span id="tuition"> $500</span></h1>
-                            <h4 id="semester">Fall 2023</h4>
-                        </div>
-                        <div className="bottom">
-                        <div className="classNumber">
-                            <h3>Class Number:<span id="classNumber"> 1</span></h3>
-                        </div>
-                            <div className="maximum-capacity">
-                                <h3>Capacity:<span id="maximum-capacity"> 27/30</span></h3>
-                            </div>
-                            <div className="credit-hours">
-                                <h3>Credit Hours:<span id="credit-hours"> 1</span></h3>
-                            </div>
-                            <div className="addClass" style={{display: 'none'}}>
-                                <button type="submit">Add Class</button>
-                            </div>
-                            <div className="removeClass">
-                                <button type="submit">Remove Class</button>
-                            </div>
-                        </div>
-                    </div>
+                    <CourseModel />
+                    <CourseModel />
+                    <CourseModel />
                 </div>
             </div>
             <div id="studentCreditHours">
                 <h1>My Credit Hours: <span id="creditHours">4</span></h1>
             </div>
             <div id="studentTuitionFees">
-                <h1>My Tuition Fees: <span id="Fees">$2000</span></h1>
+                <h1>My Tuition Fees: <span id="tuition">$2000</span></h1>
             </div>
         </div>
     </div>
