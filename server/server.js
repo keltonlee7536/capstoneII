@@ -46,12 +46,22 @@ VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}
 //a request to read user data?
 
 app.get("/getuser", (req, res) => {
+
+  
+
+  const querySTMNT = `${user_id} * from accounts;`
+
+
+
   res.send("res.send portion of app.get")
 });
 
-app.post("/getuserpost", (req, res) => {
-  res.send("res.send portion of app.post")
-});
+
+
+
+// app.post("/getuserpost", (req, res) => {
+//   res.send("res.send portion of app.post")
+// });
 
 
 
