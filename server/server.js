@@ -13,19 +13,19 @@ app.use(cors())
 
 //create user
 app.post("/adduser", (req, res) => {
-  const username = req.body["username"]
-  const password = req.body["password"]
-  const email = req.body["email@example.com"]
-  const first_name = req.body["first_name"]
-  const last_name = req.body["last_name"]
-  const phone_number = req.body["phone_number"]
-  const address = req.body["address"]
-  const role = req.body["role"]
-  const create_date = req.body["create_date"]
+  const create_username = req.body["username"]
+  const create_password = req.body["password"]
+  const create_email = req.body["email@example.com"]
+  const create_first_name = req.body["first_name"]
+  const create_last_name = req.body["last_name"]
+  const create_phone_number = req.body["phone_number"]
+  const create_address = req.body["address"]
+  const create_role = req.body["role"]
+  const create_create_date = req.body["create_date"]
 
   const insertSTMT = `INSERT INTO  accounts (username, password, email, first_name, last_name, phone_number, address, role, create_date)
    
-VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}', '${phone_number}','${address}','${role}','${create_date}');
+VALUES ( '${create_username}',  '${create_password}', '${create_email}','${create_first_name}','${create_last_name}', '${create_phone_number}','${create_address}','${create_role}','${create_create_date}');
     `
   pool
     .query(insertSTMT)
@@ -51,11 +51,15 @@ app.get('/getuser', (req, res)=>{
   client.query(`select * from accounts where user_id = ${user_id}`,(err, result)=>{
     if(!err){
       res.send(result.rows);
-      console.log(result.rows);
-      const resultTest = result
-      console.log(resultTest.rows)
-      studentArr = JSON.parse(resultTest);
-      console.log(studentArr)
+      const username = result.rows[0].username
+      const password = result.rows[0].password
+      const email = result.rows[0].email
+      const first_name = result.rows[0].first_name
+      const last_name = result.rows[0].last_name
+      console.log(
+        username,
+        password
+        )
     }else{
       console.log(err)
     }
