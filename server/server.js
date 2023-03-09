@@ -3,15 +3,15 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const pool = require("./database.js");
+const client = require("./database.js");
 const path = require("path");
 const logger = require('./config/logger')
  const morgan = require('morgan');
-const { response } = require("express");
 const PORT = process.env.PORT || 4000;
 app.use(express.json())
 app.use(cors())
 
-//add user
+//create user
 app.post("/adduser", (req, res) => {
   const username = req.body["username"]
   const password = req.body["password"]
@@ -42,28 +42,41 @@ VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}
 });
 
 
-//a request to read user data?
+//read user
+client.connect();
 
-app.get("/getuser", (req, res) => {
+user_id = 9
 
-   const user_id =  req.body["current_user_id"]
+app.get('/getuser', (req, res)=>{
+  client.query(`select * from accounts where user_id = ${user_id}`,(err, result)=>{
+    if(!err){
+      res.send(result.rows);
+      console.log(result.rows);
+      const resultTest = result
+      console.log(resultTest.rows)
+      studentArr = JSON.parse(resultTest);
+      console.log(studentArr)
+    }else{
+      console.log(err)
+    }
+    //const retrievedUserDataObject = JSON.parse(retrievedUserData)
+    //console.log("retrievedUserDataObject: " + retrievedUserDataObject)
 
-  const querySTMNT = `select * from accounts where user_id = ${user_id}`
-
-  pool
-  .query(querySTMNT)
-  .then((response) => {
-  console.log(response);
+  })
+  client.end;
 })
-  .catch((err) => {
-  console.log(err);
-});
-res.send(
-  "req.body is: " + req.body 
-+ "serched for user_id: " + user_id 
-+ " response is: " + response + 
-"role is: " + role);
-});
+
+
+//update user
+
+
+//delete user
+
+
+
+
+
+
 
 // app.post("/getuserpost", (req, res) => {
 //   res.send("res.send portion of app.post")
