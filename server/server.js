@@ -5,7 +5,8 @@ const app = express();
 const pool = require("./database.js");
 const path = require("path");
 const logger = require('./config/logger')
- const morgan = require('morgan')
+ const morgan = require('morgan');
+const { response } = require("express");
 const PORT = process.env.PORT || 4000;
 app.use(express.json())
 app.use(cors())
@@ -41,39 +42,34 @@ VALUES ( '${username}',  '${password}', '${email}','${first_name}','${last_name}
 });
 
 
-
-
 //a request to read user data?
 
 app.get("/getuser", (req, res) => {
 
-  
+   const user_id =  req.body["current_user_id"]
 
-  const querySTMNT = `${user_id} * from accounts;`
+  const querySTMNT = `select * from accounts where user_id = ${user_id}`
 
-
-
-  res.send("res.send portion of app.get")
+  pool
+  .query(querySTMNT)
+  .then((response) => {
+  console.log(response);
+})
+  .catch((err) => {
+  console.log(err);
 });
-
-
-
+res.send(
+  "req.body is: " + req.body 
++ "serched for user_id: " + user_id 
++ " response is: " + response + 
+"role is: " + role);
+});
 
 // app.post("/getuserpost", (req, res) => {
 //   res.send("res.send portion of app.post")
 // });
 
-
-
-
-
-
-
-
 app.listen(4000, () => console.log(`server on localhost: ${PORT}`))
-
-
-
 
 // //an app.get request
 // app.get("/adduser",(req,res) => {
