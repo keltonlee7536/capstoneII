@@ -495,3 +495,29 @@ a{
         }
     }
 }
+.tab-list {
+    border-bottom: 3px solid #ccc;
+    padding-left: 0;
+    padding-bottom: 1px;
+    font-size: 18px;
+  }
+  
+  .tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+    cursor:pointer;
+  }
+  .tab-list-item:hover {
+   opacity: 80%;
+  }
+  
+  .tab-list-active {
+    background-color: #119CFD;
+    color: black;
+    border-width: 1px 1px 0 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 20px;
+  }
