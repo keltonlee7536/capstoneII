@@ -46,27 +46,13 @@ VALUES ( '${create_username}',  '${create_password}', '${create_email}','${creat
 //read user
 client.connect();
 
-user_id = 9
+user_id = 2
 
 app.get('/getuser', (req, res)=>{
   client.query(`select * from accounts where user_id = ${user_id}`,(err, result)=>{
     if(!err){
-      res.send(result.rows);
+      res.json({users: result.rows});
       //const username = result.rows[0].username
-      const password = result.rows[0].password
-      const email = result.rows[0].email
-      const first_name = result.rows[0].first_name
-      const last_name = result.rows[0].last_name
-      const phone_number = result.rows[0].phone_number
-      const address = result.rows[0].address
-      const role = result.rows[0].role
-      const create_date = result.rows[0].create_date
-      const hash = result.rows[0].hash
-
-      let user = [ password, email, first_name, last_name, phone_number, address, role, create_date, hash]
-
-        console.log(user)
-
     }else{
       console.log(err)
     }

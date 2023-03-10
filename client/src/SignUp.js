@@ -1,10 +1,36 @@
 import './css/style.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 function CreateSignUp() {
+
+            const[users, setUsers] = useState([])
+
+        const fetchData = () => {
+            fetch("/getuser")
+            .then(response => {
+                return response.json()
+            }).then(data => {
+                setUsers(data.users)
+        })}
+
+        useEffect(() => {
+            fetchData()
+        }, [])
+
         return (
+
             <div className='signOverall'>
+                <div>
+                    {users.length > 0 && (
+                        <ul>
+                            {users.map(user => (
+                                <li key={user.user_id}>{user.username}</li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+
                 <div className='signContainer'>
                     <div className='signHeader'>
                         <h1>Sign Up</h1>

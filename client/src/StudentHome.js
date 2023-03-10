@@ -1,15 +1,40 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import './css/style.css';
 import { Link } from "react-router-dom";
 import CourseModel from './CourseModel';
-import {user} from '../';
 
 function CreateStudentHome() {
-    //document.getElementById("username").innerHTML = user[0];
+
+    const[users, setUsers] = useState([])
+
+    const fetchData = () => {
+        fetch("/getuser")
+        .then(response => {
+            return response.json()
+        }).then(data => {
+            setUsers(data.users)
+    })}
+
+    useEffect(() => {
+        fetchData()
+    }, []);
+
     return(
+
     <div id="studentHomeOverall">
+                {/* <div>
+                    {users.length > 0 && (
+                        <ul>
+                            {users.map(user => (
+                                <li key={user.user_id}>{user.username}</li>
+                            ))}
+                        </ul>
+                    )}
+                </div> */}
+        
         <div id="topBar">
-            <Link to={"/StudentHome"}><h3 id="username">User Name</h3></Link>
+            <Link to={"/StudentHome"}>
+                {users.map((user) =><div key={user.user_id}><h3 id="username">{user.username}</h3></div>)}</Link>
             <Link to={"/Login"}><h3>Log Out</h3></Link>
         </div>
         <div id="studentMain">
@@ -17,7 +42,7 @@ function CreateStudentHome() {
             <div id="studentInfo">
                 <div id="info1">
                     <label>First Name:</label>
-                    <input type="text" id="first_name"></input>
+                    <input type="text" id="first_name" placeholder="name"></input>
                     <label>Last Name:</label>
                     <input type="text" id="last_name"></input>
                     <label>User Name:</label>
