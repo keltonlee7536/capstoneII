@@ -2,8 +2,10 @@ import React from "react";
 import './css/style.css';
 import { Link } from "react-router-dom";
 import CourseModel from './CourseModel';
+import {user} from '../';
 
 function CreateStudentHome() {
+    //document.getElementById("username").innerHTML = user[0];
     return(
     <div id="studentHomeOverall">
         <div id="topBar">
