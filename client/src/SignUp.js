@@ -25,7 +25,7 @@ function CreateSignUp() {
                             <label>Last Name:</label>
                             <input type="text" id="create_last_name" required></input> 
                             <label>Phone Number:</label>
-                            <input type="number" id="create_phone_number"></input> 
+                            <input type="number" id="create_phone_number" required></input> 
                             <label>Address:</label>
                             <input type="text" id="create_address" required></input>   
                         </div>
