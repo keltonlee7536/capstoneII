@@ -34,15 +34,21 @@ function CreateStudentHome() {
         
         <div id="topBar">
             <Link to={"/StudentHome"}>
-                {users.map((user) =><div key={user.user_id}><h3 id="username">{user.username}</h3></div>)}</Link>
+                {users.map((user) => <div key={user.user_id}><h3 id="username">{user.username}</h3></div>)}</Link>
             <Link to={"/Login"}><h3>Log Out</h3></Link>
         </div>
+
         <div id="studentMain">
             <h1>My Information</h1>
             <div id="studentInfo">
                 <div id="info1">
                     <label>First Name:</label>
-                    <input type="text" id="first_name" placeholder="name"></input>
+                    <input type="text" id="first_name" placeholder="name" key={users.user_id}>
+
+                    {users.map((users) => <div key={users.user_id}><h3 id="username">{users.username}</h3></div>)}
+
+
+                    </input>
                     <label>Last Name:</label>
                     <input type="text" id="last_name"></input>
                     <label>User Name:</label>
