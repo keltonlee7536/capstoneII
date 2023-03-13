@@ -5,15 +5,16 @@ import CourseModel from './CourseModel';
 
 function CreateStudentHome() {
 
-    const[users, setUsers] = useState([])
+    const[users, setUsers] = useState()
 
     const fetchData = () => {
         fetch("/getuser")
         .then(response => {
             return response.json()
         }).then(data => {
-            setUsers(data.users)
-    })}
+            console.log(data.users[0]);
+            setUsers(data.users[0])
+    }).catch(console.error)}
 
     useEffect(() => {
         fetchData()
@@ -34,32 +35,34 @@ function CreateStudentHome() {
         
         <div id="topBar">
             <Link to={"/StudentHome"}>
-                {users.map((user) => <div key={user.user_id}><h3 id="username">{user.username}</h3></div>)}</Link>
+                {<h3 id="username">{(users) ? users.username : null}</h3>}</Link>
             <Link to={"/Login"}><h3>Log Out</h3></Link>
         </div>
 
         <div id="studentMain">
             <h1>My Information</h1>
-            {users.map((user) => <div>
                 <div id="studentInfo">
                 <div id="info1">
                     <label>First Name:</label>
-                    <input type="text" id="first_name" placeholder="name"></input>
+                    <input id="first_name" onChange={(e) => {setUsers({...users, ...{first_name: e.target.value}})}} value={(users) ? users.first_name : 'noth'}></input>
+
                     <label>Last Name:</label>
-                    <input type="text" id="last_name"></input>
+                    <input id="last_name" onChange={(e) => {setUsers({...users, ...{last_name: e.target.value}})}} value={(users) ? users.last_name : 'noth'}></input>
+
                     <label>User Name:</label>
-                    <input type="text" id="username"></input>
+                    <input id="first_name" onChange={(e) => {setUsers({...users, ...{username: e.target.value}})}} value={(users) ? users.username : 'noth'}></input>
+
                 </div>
                 <div id="info2">
                     <label>Phone Number:</label>
-                    <input type="number" id="phone_number"></input>
+                    <input id="phone_number" onChange={(e) => {setUsers({...users, ...{phone_number: e.target.value}})}} value={(users) ? users.phone_number : 'noth'}></input>
                     <label>Address:</label>
-                    <input type="text" id="address"></input>
+                    <input id="address" onChange={(e) => {setUsers({...users, ...{address: e.target.value}})}} value={(users) ? users.address : 'noth'}></input>
                     <label>Email:</label>
-                    <input type="text" id="email"></input>
+                    <input id="email" onChange={(e) => {setUsers({...users, ...{email: e.target.value}})}} value={(users) ? users.email : 'noth'}></input>
                 </div>
             </div>
-            </div>)}
+
             <div id="studentCourses">
                 <div id="header">
                     <h1>My Courses</h1>

@@ -46,7 +46,7 @@ VALUES ( '${create_username}',  '${create_password}', '${create_email}','${creat
 //read user
 client.connect();
 
-user_id = 2
+user_id = 9
 
 app.get('/getuser', (req, res)=>{
   client.query(`select * from accounts where user_id = ${user_id}`,(err, result)=>{
