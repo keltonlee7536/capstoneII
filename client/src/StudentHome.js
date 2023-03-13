@@ -40,15 +40,11 @@ function CreateStudentHome() {
 
         <div id="studentMain">
             <h1>My Information</h1>
-            <div id="studentInfo">
+            {users.map((user) => <div>
+                <div id="studentInfo">
                 <div id="info1">
                     <label>First Name:</label>
-                    <input type="text" id="first_name" placeholder="name" key={users.user_id}>
-
-                    {users.map((users) => <div key={users.user_id}><h3 id="username">{users.username}</h3></div>)}
-
-
-                    </input>
+                    <input type="text" id="first_name" placeholder="name"></input>
                     <label>Last Name:</label>
                     <input type="text" id="last_name"></input>
                     <label>User Name:</label>
@@ -63,6 +59,7 @@ function CreateStudentHome() {
                     <input type="text" id="email"></input>
                 </div>
             </div>
+            </div>)}
             <div id="studentCourses">
                 <div id="header">
                     <h1>My Courses</h1>

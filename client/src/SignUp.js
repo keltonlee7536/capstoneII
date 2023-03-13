@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function CreateSignUp() {
 
-            const[users, setUsers] = useState([])
+        const[users, setUsers] = useState([])
 
         const fetchData = () => {
             fetch("/getuser")
