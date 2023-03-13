@@ -39,10 +39,11 @@ function CreateStudentHome() {
         </div>
         <div id="studentMain">
             <h1>My Information</h1>
-            <div id="studentInfo">
+            {users.map((user) => <div>
+                <div id="studentInfo">
                 <div id="info1">
                     <label>First Name:</label>
-                    <input type="text" id="first_name" placeholder="name"></input>
+                    <input type="text" id="first_name" key={users.user_id}>{users.first_name}</input>
                     <label>Last Name:</label>
                     <input type="text" id="last_name"></input>
                     <label>User Name:</label>
@@ -57,6 +58,7 @@ function CreateStudentHome() {
                     <input type="text" id="email"></input>
                 </div>
             </div>
+            </div>)}
             <div id="studentCourses">
                 <div id="header">
                     <h1>My Courses</h1>
