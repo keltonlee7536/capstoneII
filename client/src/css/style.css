@@ -525,4 +525,199 @@ a {
   font-size: 20px;
 }
 
+@media (max-width: 425px) {
+  .courseModel .top {
+    flex-direction: column;
+  }
+  .courseModel .top h1 {
+    font-size: 19px;
+  }
+  .courseModel .top h1 .circle {
+    font-size: 8px;
+  }
+  .courseModel .top h1 #tuition {
+    font-size: 18px;
+  }
+  .courseModel .middle {
+    font-size: 17px;
+    width: 100%;
+  }
+  .courseModel .bottom {
+    font-size: 13px;
+    align-items: baseline;
+  }
+  .courseModel .bottom .class-number, .courseModel .bottom .maximum-capacity, .courseModel .bottom .credit-hours {
+    padding: 0px 20px 0px 20px;
+    font-size: 11px;
+  }
+  .courseModel .bottom .removeClass button, .courseModel .bottom .addClass button {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .loginOverall .loginContainer {
+    height: 100vh;
+    border-radius: 0px;
+  }
+  .loginOverall .loginContainer .loginHeader {
+    font-size: 25px;
+  }
+  .loginOverall .loginContainer .signUp {
+    text-align: center;
+  }
+  .signOverall {
+    height: 100%;
+    width: 100%;
+  }
+  .signOverall .signContainer {
+    height: auto;
+    overflow: scroll;
+    border-radius: 0px;
+  }
+  .signOverall .signContainer .signHeader {
+    font-size: 25px;
+  }
+  .signOverall .signContainer #information {
+    flex-direction: column-reverse;
+  }
+  .signOverall .signContainer .signUp {
+    text-align: center;
+  }
+  #coursesOverall {
+    width: 75vh;
+  }
+  #coursesOverall #coursesContainer {
+    padding: 50px 0px 50x 0px;
+  }
+  #coursesOverall #coursesContainer #courseLocation {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #coursesOverall #coursesContainer #courseLocation #myCourseHeader {
+    font-size: 13px;
+  }
+  #coursesOverall #coursesContainer #courseLocation #myCourseHeader button {
+    font-size: 15px;
+    height: 35px;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .top {
+    flex-direction: column;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .top h1 {
+    font-size: 19px;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .top h1 .circle {
+    font-size: 8px;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .top h1 #tuition {
+    font-size: 18px;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .middle {
+    font-size: 17px;
+    width: 100%;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .bottom {
+    font-size: 13px;
+    align-items: baseline;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .class-number, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .maximum-capacity, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .credit-hours {
+    padding: 0px 20px 0px 20px;
+    font-size: 11px;
+  }
+  #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .removeClass button, #coursesOverall #coursesContainer #courseLocation .courseModel .bottom .addClass button {
+    padding: 10px;
+    font-size: 13px;
+  }
+  #studentHomeOverall #studentMain {
+    width: 77%;
+  }
+  #studentHomeOverall #studentMain h1 {
+    text-align: center;
+  }
+  #studentHomeOverall #studentMain #studentInfo {
+    flex-direction: column;
+  }
+  #studentHomeOverall #studentMain #studentInfo #info1, #studentHomeOverall #studentMain #studentInfo #info2 {
+    padding: 0px 50px 0px 50px;
+  }
+  #studentHomeOverall #studentMain .courseModel .top {
+    flex-direction: column;
+  }
+  #studentHomeOverall #studentMain .courseModel .top h1 {
+    font-size: 19px;
+  }
+  #studentHomeOverall #studentMain .courseModel .top h1 .circle {
+    font-size: 8px;
+  }
+  #studentHomeOverall #studentMain .courseModel .top h1 #tuition {
+    font-size: 18px;
+  }
+  #studentHomeOverall #studentMain .courseModel .middle {
+    font-size: 17px;
+    width: 100%;
+  }
+  #studentHomeOverall #studentMain .courseModel .bottom {
+    font-size: 13px;
+    align-items: baseline;
+  }
+  #studentHomeOverall #studentMain .courseModel .bottom .class-number, #studentHomeOverall #studentMain .courseModel .bottom .maximum-capacity, #studentHomeOverall #studentMain .courseModel .bottom .credit-hours {
+    padding: 0px 20px 0px 20px;
+    font-size: 11px;
+  }
+  #studentHomeOverall #studentMain .courseModel .bottom .removeClass button, #studentHomeOverall #studentMain .courseModel .bottom .addClass button {
+    padding: 10px;
+    font-size: 13px;
+  }
+  #adminOverall #adminMain {
+    width: 77%;
+  }
+  #adminOverall #adminMain #adminInfoHeader {
+    font-size: 15px;
+  }
+  #adminOverall #adminMain #adminInfoHeader button {
+    font-size: 15px;
+  }
+  #adminOverall #adminMain #adminInfo, #adminOverall #adminMain #studentInfo {
+    flex-direction: column;
+  }
+  #adminOverall #adminMain #adminInfo #info1, #adminOverall #adminMain #adminInfo #info2, #adminOverall #adminMain #studentInfo #info1, #adminOverall #adminMain #studentInfo #info2 {
+    padding: 0px 50px 0px 50px;
+  }
+  #adminOverall #adminMain #studentInfoLocation #studentInfoHeader button {
+    font-size: 15px;
+  }
+  #adminOverall #adminMain #studentScheduleHeader button {
+    font-size: 15px;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .top {
+    flex-direction: column;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 {
+    font-size: 19px;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 .circle {
+    font-size: 8px;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .top h1 #tuition {
+    font-size: 18px;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .middle {
+    font-size: 17px;
+    width: 100%;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom {
+    font-size: 13px;
+    align-items: baseline;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .class-number, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .maximum-capacity, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .credit-hours {
+    padding: 0px 20px 0px 20px;
+    font-size: 11px;
+  }
+  #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .removeClass button, #adminOverall #adminMain #studentScheduleLocation .courseModel .bottom .addClass button {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

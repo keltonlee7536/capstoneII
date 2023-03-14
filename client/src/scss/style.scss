@@ -518,3 +518,220 @@ a{
     border-top-right-radius: 5px;
     font-size: 20px;
 }
+
+@media (max-width: 425px) {
+    .courseModel {
+        .top {
+            flex-direction: column;
+            h1 {
+                font-size: 19px;
+                .circle {
+                    font-size: 8px;
+                }
+                #tuition {
+                    font-size: 18px;
+                }
+            }
+        }
+        .middle {
+            font-size: 17px;
+            width: 100%;
+        }
+        .bottom {
+            font-size: 13px;
+            align-items: baseline;
+            .class-number, .maximum-capacity, .credit-hours {
+                padding: 0px 20px 0px 20px;
+                font-size: 11px;
+            }
+            .removeClass button, .addClass button {
+                padding:10px;
+                font-size: 13px;
+            }
+        }
+    }
+    .loginOverall {
+        .loginContainer {
+            height: 100vh;
+            border-radius: 0px;
+            .loginHeader {
+                font-size: 25px;
+            }
+            .signUp {
+                text-align: center;
+            }
+        }
+    }
+    .signOverall {
+        height: 100%;
+        width: 100%;
+        .signContainer {
+            height: auto;
+            overflow: scroll;
+            border-radius: 0px;
+            .signHeader {
+                font-size: 25px;
+            }
+            #information{
+                flex-direction: column-reverse;
+            }
+            .signUp {
+                text-align: center;
+            }
+        }
+    }
+    #coursesOverall {
+        width: 75vh;
+        #coursesContainer {
+            padding: 50px 0px 50x 0px;
+            #courseLocation {
+                padding: 10px;
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-right: 0px;
+                #myCourseHeader{
+                    font-size: 13px;
+                    button {
+                        font-size: 15px;
+                        height: 35px;
+                    }
+                }
+                .courseModel {
+                    .top {
+                        flex-direction: column;
+                        h1 {
+                            font-size: 19px;
+                            .circle {
+                                font-size: 8px;
+                            }
+                            #tuition {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .middle {
+                        font-size: 17px;
+                        width: 100%;
+                    }
+                    .bottom {
+                        font-size: 13px;
+                        align-items: baseline;
+                        .class-number, .maximum-capacity, .credit-hours {
+                            padding: 0px 20px 0px 20px;
+                            font-size: 11px;
+                        }
+                        .removeClass button, .addClass button {
+                            padding:10px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #studentHomeOverall {
+        #studentMain {
+            width: 77%;
+            h1{
+                text-align: center;
+            }
+            #studentInfo {
+                flex-direction: column;
+                #info1, #info2 {
+                    padding: 0px 50px 0px 50px;
+                }
+            }
+            .courseModel {
+                .top {
+                    flex-direction: column;
+                    h1 {
+                        font-size: 19px;
+                        .circle {
+                            font-size: 8px;
+                        }
+                        #tuition {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .middle {
+                    font-size: 17px;
+                    width: 100%;
+                }
+                .bottom {
+                    font-size: 13px;
+                    align-items: baseline;
+                    .class-number, .maximum-capacity, .credit-hours {
+                        padding: 0px 20px 0px 20px;
+                        font-size: 11px;
+                    }
+                    .removeClass button, .addClass button {
+                        padding:10px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    #adminOverall {
+        #adminMain {
+            width:77%;
+            #adminInfoHeader {
+                font-size: 15px;
+                button {
+                    font-size: 15px;
+                }
+            }
+            #adminInfo, #studentInfo {
+                flex-direction: column;
+                #info1, #info2 {
+                    padding: 0px 50px 0px 50px;
+                }
+            }
+            #studentInfoLocation {
+                #studentInfoHeader{
+                    button {
+                        font-size: 15px;
+                    }
+                }
+            }
+            #studentScheduleHeader{
+                button {
+                    font-size: 15px;
+                }
+            }
+            #studentScheduleLocation {
+                .courseModel {
+                    .top {
+                        flex-direction: column;
+                        h1 {
+                            font-size: 19px;
+                            .circle {
+                                font-size: 8px;
+                            }
+                            #tuition {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .middle {
+                        font-size: 17px;
+                        width: 100%;
+                    }
+                    .bottom {
+                        font-size: 13px;
+                        align-items: baseline;
+                        .class-number, .maximum-capacity, .credit-hours {
+                            padding: 0px 20px 0px 20px;
+                            font-size: 11px;
+                        }
+                        .removeClass button, .addClass button {
+                            padding:10px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
