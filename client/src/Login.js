@@ -1,12 +1,13 @@
 import './css/style.css';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import StudentHome from './StudentHome';
 
 function auth(users){
     const auth_username = document.getElementById('username').innerHTML
     const auth_password = document.getElementById('user_password').innerHTML
 
-    if (auth_username === users.username && auth_password === users.password){
+    if (auth_username == users[0].username && auth_password == users[0].password){
     const authRoute = "/studenthome"
     console.log("authenticated" + authRoute)
 
@@ -48,7 +49,16 @@ useEffect(() => {
                     <input type="text" id="username" required></input>
                     <label>Password:</label>
                     <input type="text" id="user_password" required></input>
-                    <Link to ={authRoute}><button onClick = {auth()} type="submit" href="/Home">Login</button></Link>
+                    <Link to = "/studentHome"{/*{authRoute}*/}><button onClick = {auth} type="submit" id="loginBtn">Login</button></Link>
+
+                    {/* input.addEventListener("keypress", function(event) {
+                        if (event.key === "Enter") {
+                            // event.preventDefault();
+                            document.getElementbyId("loginBtn").click();
+                        }
+                    }); */}
+
+
 
                 </div>
                 <div className='signUp'>

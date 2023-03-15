@@ -21,15 +21,6 @@ function CreateSignUp() {
         return (
 
             <div className='signOverall'>
-                <div>
-                    {users.length > 0 && (
-                        <ul>
-                            {users.map(user => (
-                                <li key={user.user_id}>{user.username}</li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
 
                 <div className='signContainer'>
                     <div className='signHeader'>
