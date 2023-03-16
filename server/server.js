@@ -48,7 +48,7 @@ client.connect();
 
 user_id = 9
 
-app.get('/getuser', (req, res)=>{
+app.get('/getCurrentUser', (req, res)=>{
   client.query(`select * from accounts where user_id = ${user_id}`,(err, result)=>{
     if(!err){
       res.json({users: result.rows});
@@ -58,6 +58,25 @@ app.get('/getuser', (req, res)=>{
     }
     //const retrievedUserDataObject = JSON.parse(retrievedUserData)
     //console.log("retrievedUserDataObject: " + retrievedUserDataObject)
+
+
+    //get all users(login)
+    app.get('/getLoginUser', (req, res)=>{
+      client.query(`select * from accounts`,(err, result)=>{
+        if(!err){
+          res.json({users: result.rows});
+          //const username = result.rows[0].username
+        }else{
+          console.log(err)
+        }
+        //const retrievedUserDataObject = JSON.parse(retrievedUserData)
+        //console.log("retrievedUserDataObject: " + retrievedUserDataObject)
+    
+      })
+    })
+    
+
+
 
   })
   client.end;

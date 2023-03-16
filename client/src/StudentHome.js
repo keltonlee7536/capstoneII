@@ -8,7 +8,7 @@ function CreateStudentHome() {
     const[users, setUsers] = useState()
 
     const fetchData = () => {
-        fetch("/getuser")
+        fetch("/getCurrentUser")
         .then(response => {
             return response.json()
         }).then(data => {

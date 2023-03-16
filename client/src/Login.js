@@ -12,7 +12,7 @@ function auth(users){
     console.log("authenticated" + authRoute)
 
     }else{
-        let authRoute = "/login"
+        const authRoute = "/signUp"
         window.alert("not valid username or password")
         console.log("authentication failed" + authRoute)
     }
@@ -24,7 +24,7 @@ function CreateLogin() {
 const[users, setUsers] = useState()
 
 const fetchData = () => {
-    fetch("/getuser")
+    fetch("/getLoginUser")
     .then(response => {
         return response.json()
     }).then(data => {
@@ -36,7 +36,7 @@ useEffect(() => {
     fetchData()
 }, []);
 
-    const authRoute = "/SignUp"
+    let authRoute = "./"
 
     return (
         <div className='loginOverall'>
@@ -49,7 +49,8 @@ useEffect(() => {
                     <input type="text" id="username" required></input>
                     <label>Password:</label>
                     <input type="text" id="user_password" required></input>
-                    <Link to = "/studentHome"{/*{authRoute}*/}><button onClick = {auth} type="submit" id="loginBtn">Login</button></Link>
+                    <Link to = {authRoute}><button onClick = {auth} type="submit" id="loginBtn">Login</button></Link>
+
 
                     {/* input.addEventListener("keypress", function(event) {
                         if (event.key === "Enter") {
@@ -57,8 +58,6 @@ useEffect(() => {
                             document.getElementbyId("loginBtn").click();
                         }
                     }); */}
-
-
 
                 </div>
                 <div className='signUp'>
