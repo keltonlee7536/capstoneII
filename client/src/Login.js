@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import StudentHome from './StudentHome';
 
 function auth(users){
+    console.log("users are" + users, users[0])
     const auth_username = document.getElementById('username').innerHTML
     const auth_password = document.getElementById('user_password').innerHTML
 
-    if (auth_username == users[0].username && auth_password == users[0].password){
-    const authRoute = "/studenthome"
-    console.log("authenticated" + authRoute)
+    if (auth_username == null || auth_password == null) {
+        console.log("*please enter your username and password.")
+        window.alert("invalid username or password")
+
+    } else if (auth_username == users[0].username && auth_password == users[0].password){
+        const authRoute = "/studenthome"
+        console.log("authenticated" + authRoute)
 
     }else{
         const authRoute = "/signUp"
@@ -19,8 +24,7 @@ function auth(users){
 }
 
 function CreateLogin() {
-
-    //fetchging the data
+    //fetching the data
 const[users, setUsers] = useState()
 
 const fetchData = () => {
@@ -36,7 +40,8 @@ useEffect(() => {
     fetchData()
 }, []);
 
-    let authRoute = "./"
+
+let authRoute = "./"
 
     return (
         <div className='loginOverall'>
@@ -71,6 +76,7 @@ useEffect(() => {
         </div>
     )
 }
+
 export default function Login() {
     return (<CreateLogin />)
 }
