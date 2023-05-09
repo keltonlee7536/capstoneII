@@ -23,10 +23,17 @@ app.post("/adduser", (req, res) => {
   const create_role = req.body["role"]
   const create_create_date = req.body["create_date"]
 
-  const insertSTMT = `INSERT INTO  accounts (username, password, email, first_name, last_name, phone_number, address, role, create_date)
+//   const insertSTMT = `INSERT INTO  accounts (username, password, email, first_name, last_name, phone_number, address, role, create_date)
    
-VALUES ( '${create_username}',  '${create_password}', '${create_email}','${create_first_name}','${create_last_name}', '${create_phone_number}','${create_address}','${create_role}','${create_create_date}');
-    `
+// VALUES ( '${create_username}',  '${create_password}', '${create_email}','${create_first_name}','${create_last_name}', '${create_phone_number}','${create_address}','${create_role}','${create_create_date}');
+// `
+
+
+
+const insertSTMT = `INSERT INTO accounts
+VALUES ('${create_username}',  '${create_password}', '${create_email}','${create_first_name}','${create_last_name}', '${create_phone_number}','${create_address}','${create_role}','${create_create_date}');`
+
+    
   pool
     .query(insertSTMT)
     .then((response) => {

@@ -5,8 +5,12 @@ import StudentHome from './StudentHome';
 
 function auth(users){
     console.log("users are" + users, users[0])
-    const auth_username = document.getElementById('username').innerHTML
-    const auth_password = document.getElementById('user_password').innerHTML
+    //** THE ORIGINAL CODE **
+    // const auth_username = document.getElementById('username').innerHTML
+    // const auth_password = document.getElementById('user_password').innerHTML
+    //** HARDCODED ALTERNATIVE **
+    const auth_username = "username-pgest"
+    const auth_password = "password-pgtest"
 
     if (auth_username == null || auth_password == null) {
         console.log("*please enter your username and password.")
@@ -25,15 +29,16 @@ function auth(users){
 
 function CreateLogin() {
     //fetching the data
-const[users, setUsers] = useState()
+const[setUsers] = useState() // was const [users, setUsers] = useState()
 
 const fetchData = () => {
     fetch("/getLoginUser")
     .then(response => {
         return response.json()
     }).then(data => {
-        console.log(data.users[0]);
+        console.log("data.users is: " + data.users[0]);
         setUsers(data.users[0])
+        console.log(data.users)
 }).catch(console.error)}
 
 useEffect(() => {
