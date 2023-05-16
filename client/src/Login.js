@@ -5,12 +5,9 @@ import StudentHome from './StudentHome';
 
 function auth(users){
     console.log("auth() users are" + users)
-    //** THE ORIGINAL CODE **
-    // const auth_username = document.getElementById('username').innerHTML
-    // const auth_password = document.getElementById('user_password').innerHTML
-    //** HARDCODED ALTERNATIVE **
-    const auth_username = "username-pgest"
-    const auth_password = "password-pgtest"
+  
+    const auth_username = document.getElementById('username').innerHTML
+    const auth_password = document.getElementById('user_password').innerHTML
 
     if (auth_username == null || auth_password == null) {
         console.log("*please enter your username and password.")
@@ -36,7 +33,7 @@ const fetchData = () => {
     .then(response => {
         return response.json()
     }).then(data => {
-        console.log("(js 39)data.users is: " + data.users);
+        console.log("(js 39)data.users is: " + data.users[0]);
         // setUsers(data.users)
         console.log("setUsers is:" + setUsers)
 }).catch(console.error)}
