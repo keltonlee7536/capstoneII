@@ -53,18 +53,19 @@ VALUES ('${create_username}',  '${create_password}', '${create_email}','${create
 //read user
 client.connect();
 
-user_id = 9
+const user_id = 9
 
 app.get('/getCurrentUser', (req, res)=>{
   client.query(`select * from accounts where user_id = ${user_id}`,(err, result)=>{
     if(!err){
       res.json({users: result.rows});
-      //const username = result.rows[0].username
+      // const username = result.rows[0].username
     }else{
       console.log(err)
     }
-    //const retrievedUserDataObject = JSON.parse(retrievedUserData)
-    //console.log("retrievedUserDataObject: " + retrievedUserDataObject)
+    // const retrievedUserDataObject = JSON.parse(res.json)
+    // console.log("retrievedUserDataObject: " + retrievedUserDataObject)
+
 
 
     //get all users(login)
@@ -72,12 +73,12 @@ app.get('/getCurrentUser', (req, res)=>{
       client.query(`select * from accounts`,(err, result)=>{
         if(!err){
           res.json({users: result.rows});
-          //const username = result.rows[0].username
+          const username = result.rows[0].username
         }else{
           console.log(err)
         }
-        //const retrievedUserDataObject = JSON.parse(retrievedUserData)
-        //console.log("retrievedUserDataObject: " + retrievedUserDataObject)
+        // const retrievedUserDataObject = JSON.parse(res.json)
+        // console.log("retrievedUserDataObject: " + retrievedUserDataObject)
     
       })
     })

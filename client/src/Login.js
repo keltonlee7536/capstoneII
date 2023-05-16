@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import StudentHome from './StudentHome';
 
 function auth(users){
-    console.log("users are" + users, users[0])
+    console.log("auth() users are" + users)
     //** THE ORIGINAL CODE **
     // const auth_username = document.getElementById('username').innerHTML
     // const auth_password = document.getElementById('user_password').innerHTML
@@ -36,9 +36,9 @@ const fetchData = () => {
     .then(response => {
         return response.json()
     }).then(data => {
-        console.log("data.users is: " + data.users[0]);
-        setUsers(data.users[0])
-        console.log(data.users)
+        console.log("(js 39)data.users is: " + data.users);
+        // setUsers(data.users)
+        console.log("setUsers is:" + setUsers)
 }).catch(console.error)}
 
 useEffect(() => {
