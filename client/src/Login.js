@@ -4,46 +4,41 @@ import { Link } from 'react-router-dom';
 import StudentHome from './StudentHome';
 
 function auth(users){
-    console.log("auth() users are" + users)
-  
-    const auth_username = document.getElementById('username').innerHTML
-    const auth_password = document.getElementById('user_password').innerHTML
 
-    if (auth_username == null || auth_password == null) {
-        console.log("*please enter your username and password.")
-        window.alert("invalid username or password")
+    console.log(users)
+    const auth_username = 'test_auth_username'; /*document.getElementById("username")*/
+    const auth_password = 'test_auth_username'; /*document.getElementById("username")*/
 
-    } else if (auth_username == users[0].username && auth_password == users[0].password){
+    for (let i = 0; i < users.length; i++) {
+      if  (incudes(auth_username && auth_password) = true){
         const authRoute = "/studenthome"
-        console.log("authenticated" + authRoute)
-
-    }else{
-        const authRoute = "/signUp"
-        window.alert("not valid username or password")
-        console.log("authentication failed" + authRoute)
+        const studentId = i
+  
+      }else{
+          const authRoute = "/signUp"
+          console.log("not valid username or password")
+      }
     }
 }
 
 function CreateLogin() {
-    //fetching the data
-const[setUsers] = useState() // was const [users, setUsers] = useState()
+const[setUsers] = useState()
 
 const fetchData = () => {
     fetch("/getLoginUser")
     .then(response => {
         return response.json()
     }).then(data => {
-        console.log("(js 39)data.users is: " + data.users[0]);
-        // setUsers(data.users)
-        console.log("setUsers is:" + setUsers)
+        console.log("data.users[0] is: " + data.users[0]);
+        setUsers(data.users)
 }).catch(console.error)}
 
-useEffect(() => {
+ useEffect(() => {
     fetchData()
-}, []);
+ }, []);
 
 
-let authRoute = "./"
+let authRoute = "" // was "./"
 
     return (
         <div className='loginOverall'>
@@ -59,12 +54,12 @@ let authRoute = "./"
                     <Link to = {authRoute}><button onClick = {auth} type="submit" id="loginBtn">Login</button></Link>
 
 
-                    {/* input.addEventListener("keypress", function(event) {
+                    {/* { input.addEventListener("keypress", function(event) {
                         if (event.key === "Enter") {
-                            // event.preventDefault();
+                            event.preventDefault();
                             document.getElementbyId("loginBtn").click();
                         }
-                    }); */}
+                    });} */}
 
                 </div>
                 <div className='signUp'>
